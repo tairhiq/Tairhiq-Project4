@@ -1,1 +1,193 @@
 /* Place CSS styles here */
+
+@import url(<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0a0606;
+    color: #ededed;
+    }
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+font-size: 25px;
+color: #ededed;
+text-decoration: none;
+font-weight: 600;
+}
+
+
+.navbar a {
+font-size: 18px;
+color: #ededed;
+text-decoration: none;
+font-weight: 500;
+margin-left: 35px;
+transition: .3s;
+}
+
+.navbar a:hover {
+    color: #00abf0
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+
+
+.home-con{
+max-width: 600px;
+}
+
+.home-con h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-con h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0 
+}
+
+.home-con p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-con .button-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+  
+}
+
+.button-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #00abf0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.button-box a:hover {
+    color:#00abf0
+}
+
+.button-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #300e0e;
+    z-index:  -1;
+    transition: .5s;
+}
+
+.button-box a:hover::before{
+    width: 100%
+}
+
+.parallax-home {
+    position: absolute;
+}
+
+/* OVERLAY */
+.overlay-wrapper {
+    position: relative;
+    max-width: 350px;
+    display: flex;
+  }
+  
+  .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: rgba(127, 17, 224, .25);
+  }
+  
+  
+  .overlay-content:hover {
+    opacity: 1;
+  }
+
+  .overlay-wrapper img {
+    width: 100%;
+    HEIGHT: AUTO;
+}
+
+
+  
+  /* END OVERLAY */
+
+  .double-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 0.25rem;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .double-gallery-grid a {
+    display: flex;
+    filter: grayscale(.5);
+  }
+  
+  .double-gallery-grid a:hover {
+    filter: grayscale(1);
+  }
+  
+  @media (min-width: 1000px) {
+    .double-gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
